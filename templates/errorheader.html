@@ -1,0 +1,107 @@
+<!doctype html>
+<!--<html lang="en" class="full-height">-->
+<html>
+  <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        {% block head %}
+        <title>{% block title %}{% endblock %}</title>
+        {% endblock %}
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='mdb/css/compiled.min.css') }}">
+        <!--<link rel="stylesheet" href="{{ url_for('static', filename='mdb/css/mdb.css') }}">-->
+        <!--<link rel="stylesheet" href="{{ url_for('static', filename='mdb/css/bootstrap.css') }}">-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <style>
+             .navbar {
+                background-color: #3f51b5;
+            }
+        </style>
+    </head>
+    <body>
+
+<!--Main Navigation-->
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Hello</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Get In Touch</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</header>
+<!--Main Navigation-->
+        <!-- Start Body -->
+        {% block content %}{% endblock %}
+        <!-- End Body -->
+
+        <!--Footer-->
+        <footer class="page-footer indigo center-on-small-only">
+            <!--Footer Links-->
+            <div class="container">
+
+                <!--First row-->
+                <div class="row">
+
+                    <!--First column-->
+                    <div class="col-md-12">
+
+                        <div class="footer-socials mb-5 flex-center">
+                            <!--Facebook-->
+                            <a class="icons-sm fb-ic" href="https://facebook.com/mdh0014" target="_blank"><i class="fa fa-facebook fa-lg white-text mr-md-4"> </i></a>
+                            <!--Twitter-->
+                            <a class="icons-sm tw-ic" href="https://twitter.com/michael_d_henry" target="_blank"><i class="fa fa-twitter fa-lg white-text mr-md-4"> </i></a>
+                            <!--Google +-->
+                            <a class="icons-sm gplus-ic" href="https://plus.google.com/u/0/+MichaelHenry01" target="_blank"><i class="fa fa-google-plus fa-lg white-text mr-md-4"> </i></a>
+                            <!--Linkedin-->
+                            <a class="icons-sm li-ic" href="https://www.linkedin.com/in/mhenry01/" target="_blank"><i class="fa fa-linkedin fa-lg white-text mr-md-4"> </i></a>
+                            <!--Instagram-->
+                            <a class="icons-sm ins-ic" href="https://instagram.com/michael_d_henry" target="_blank"><i class="fa fa-instagram fa-lg white-text mr-md-4"> </i></a>
+                        </div>
+                    </div>
+                    <!--/First column-->
+                </div>
+                <!--/First row-->
+            </div>
+            <!--/Footer Links-->
+            <!--Copyright-->
+            <div class="footer-copyright">
+                <div class="container-fluid">
+                    &copy; Copyright <script>document.write(new Date().getFullYear())</script> by <a href="https://michaelhenry.me">Michael Henry</a>.
+                </div>
+            </div>
+            <!--/.Copyright-->
+
+        </footer>
+        <!--/.Footer-->
+
+    <script src="{{ url_for('static', filename='mdb/js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='mdb/js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='mdb/js/bootstrap.js') }}"></script>
+    <script src="{{ url_for('static', filename='mdb/js/mdb.js') }}"></script>
+    <!--<script src="{{ url_for('static', filename='mdb/js/compiled.js') }}"></script>-->
+      <script>
+        wow = new WOW().init();
+    </script>
+  </body>
+</html>
