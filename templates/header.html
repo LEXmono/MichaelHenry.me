@@ -172,6 +172,33 @@
             });
          });
     </script>
+    <script>
+$('.count_up').each(function() {
+  var $this = $(this),
+      countTo = $this.attr('data-count');
+
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 4000,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });
+
+
+
+});
+    </script>
     <script src="{{ url_for('static', filename='mdb/js/popper.min.js') }}"></script>
     <script src="{{ url_for('static', filename='mdb/js/bootstrap.js') }}"></script>
     <script src="{{ url_for('static', filename='mdb/js/compiled.min.js') }}"></script>

@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, abort, jsonify
 from flask_recaptcha import ReCaptcha
 from config.site_config import configure_app
 from custom_exceptions import InvalidUsage
+from datetime import datetime
+from dateutil import rrule
 from github import get_repos
 from send_email import send_email
 
@@ -20,7 +22,14 @@ recaptcha.init_app(app)
 def index():
     repos = get_repos()[:3]
     resume_url = app.config['RESUME_URL']
-    return render_template('index.html', repos=repos, resume_url=resume_url)
+    weeks = rrule.rrule(rrule.WEEKLY,
+                        dtstart=datetime(2011, 10, 2),
+                        until=datetime.now())
+    counts = {'coffee': 6 * (datetime.now() - datetime(2006, 4, 1)).days,
+              'hours': weeks.count() * 40,
+              'ideas': weeks.count() * 2}
+    return render_template('index.html', repos=repos, resume_url=resume_url,
+                           counts=counts)
 
 
 @app.route('/send_email', methods=['POST'])
