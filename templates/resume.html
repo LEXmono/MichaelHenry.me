@@ -18,82 +18,6 @@
                     </div>
                 </div>
             </div>
-            <!--/Download Row-->
-            <!--<div class="container">-->
-                <!--<div class="row pt-5 pb-5">-->
-                    <!--<div class="col">-->
-                        <!--&lt;!&ndash;Card&ndash;&gt;-->
-                        <!--<div class="card testimonial-card">-->
-
-                            <!--&lt;!&ndash;Bacground color&ndash;&gt;-->
-                            <!--<div class="card-up blue darken-4">-->
-                            <!--</div>-->
-
-                            <!--&lt;!&ndash;Avatar&ndash;&gt;-->
-                            <!--<div class="avatar">-->
-                                <!--<i class="fa fa-coffee fa-4x pt-3 blue-icon"></i>-->
-                            <!--</div>-->
-
-                            <!--<div class="card-body">-->
-                                <!--&lt;!&ndash;Name&ndash;&gt;-->
-                                <!--<h4 class="card-title count_up" data-count="{{ counts['coffee'] }}"></h4>-->
-                                <!--<hr>-->
-                                <!--&lt;!&ndash;Quotation&ndash;&gt;-->
-                                <!--<p>Cups of Coffee</p>-->
-                            <!--</div>-->
-
-                        <!--</div>-->
-                        <!--&lt;!&ndash;/.Card&ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<div class="col">-->
-                        <!--<div class="card testimonial-card">-->
-
-                            <!--&lt;!&ndash;Bacground color&ndash;&gt;-->
-                            <!--<div class="card-up blue darken-4">-->
-                            <!--</div>-->
-
-                            <!--&lt;!&ndash;Avatar&ndash;&gt;-->
-                            <!--<div class="avatar">-->
-                                <!--<i class="fa fa-clock-o fa-4x pt-3 blue-icon"></i>-->
-                            <!--</div>-->
-
-                            <!--<div class="card-body">-->
-                                <!--&lt;!&ndash;Name&ndash;&gt;-->
-                                <!--<h4 class="card-title count_up" data-count="{{ counts['hours'] }}"></h4>-->
-                                <!--<hr>-->
-                                <!--&lt;!&ndash;Quotation&ndash;&gt;-->
-                                <!--<p>IT Hours Worked</p>-->
-                            <!--</div>-->
-
-                        <!--</div>-->
-                        <!--&lt;!&ndash;/.Card&ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<div class="col">-->
-                        <!--<div class="card testimonial-card">-->
-
-                            <!--&lt;!&ndash;Bacground color&ndash;&gt;-->
-                            <!--<div class="card-up blue darken-4">-->
-                            <!--</div>-->
-
-                            <!--&lt;!&ndash;Avatar&ndash;&gt;-->
-                            <!--<div class="avatar">-->
-                                <!--<i class="fa fa-lightbulb-o fa-4x pt-3 blue-icon"></i>-->
-                            <!--</div>-->
-
-                            <!--<div class="card-body">-->
-                                <!--&lt;!&ndash;Name&ndash;&gt;-->
-                                <!--<h4 class="card-title count_up" data-count="{{ counts['ideas'] }}"></h4>-->
-                                <!--<hr>-->
-                                <!--&lt;!&ndash;Quotation&ndash;&gt;-->
-                                <!--<p>Crazy Ideas</p>-->
-                            <!--</div>-->
-
-                        <!--</div>-->
-                        <!--&lt;!&ndash;/.Card&ndash;&gt;-->
-                    <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            </div>
             <div class="container">
                     <section class="text-center pt-4 pb-3">
                         <!--Grid row-->
@@ -183,8 +107,9 @@
                             <div class="col-lg-6 col-xl-5 align-self-center">
 
                                 <!--Image-->
-                                <img src="{{ url_for('static', filename='images/personal_projects.jpeg') }}" alt="My personal Projects" class="img-fluid rounded z-depth-1">
-
+                                <a href="https://github.com/LEXmono/" target="_blank">
+                                    <img src="{{ url_for('static', filename='images/GitHub-Mark.png') }}" alt="My personal Projects" class="img-fluid rounded">
+                                </a>
                             </div>
                             <!--Grid column-->
 
@@ -197,7 +122,7 @@
 
                                     </div>
                                     <div class="col-10">
-                                        <a href="{{ repo['html_url'] }}"><h5 class="font-bold">{{ repo['name'] }}</h5></a>
+                                        <a href="{{ repo['html_url'] }}" target="_blank"><h5 class="font-bold">{{ repo['name'] }}</h5></a>
                                         <p class="grey-text">{{ repo['description'] }}</p>
                                     </div>
                                 </div>
@@ -228,7 +153,7 @@
 
                             <div class="card-body">
                                 <!--Name-->
-                                <h4 class="card-title">Support Engineer III</h4>
+                                <h4 class="card-title">Systems Engineer</h4>
                                 <h5 class="h5-responsive">Amazon Web Services</h5>
                                 <hr>
                                 <!--Quotation-->
