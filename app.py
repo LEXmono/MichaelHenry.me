@@ -53,18 +53,14 @@ def email():
         raise InvalidUsage('No Bots Allowed!', status_code=450)
     return response
 
+@app.route('/500')
+def show_500():
+    return render_template('500.html')
 
 @app.errorhandler(404)
 def page_not_found(e):
     logger.info("[404 ERROR] - {} - e".format(request, e))
     return render_template('404.html'), 404
-
-
-@app.errorhandler(500)
-def page_not_found(e):
-    logger.error("[500 ERROR] - {} - e".format(request, e))
-    return render_template('500.html'), 500
-
 
 @app.errorhandler(InvalidUsage)
 def handle_invalid_usage(error):

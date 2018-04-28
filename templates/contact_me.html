@@ -1,0 +1,201 @@
+        <!--Contact Me Layout-->
+        <main class="text-center py-5" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <!-- Form contact -->
+                        <section class="section mb-5 pt-5">
+
+                            <!--Grid row-->
+                            <div class="row">
+
+                                <!--Grid column-->
+                                <div class="col-md-12">
+
+                                    <!--Form with header-->
+                                    <div class="card">
+                                        <div class="row">
+                                            <div class="col-lg-8">
+                                                <div class="card-body form">
+                                                    <!--Header-->
+                                                    <div class="formHeader mb-1 pt-3">
+                                                        <h3><i class="fa fa-envelope"></i> Write me:</h3>
+                                                    </div>
+
+                                                    <br>
+
+                                                    <form action="/send_email" method="POST" id="contact_me">
+                                                        <!--Grid row-->
+                                                        <div class="row">
+
+                                                            <!--Grid column-->
+                                                            <div class="col-md-6">
+                                                                <div class="md-form">
+                                                                    <div class="md-form">
+                                                                        <input type="text" id="form-contact-name"
+                                                                               class="form-control" name="name" required>
+                                                                        <label for="form-contact-name" class="">Your name</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--Grid column-->
+
+                                                            <!--Grid column-->
+                                                            <div class="col-md-6">
+                                                                <div class="md-form">
+                                                                    <div class="md-form">
+                                                                        <input type="email" id="form-contact-email"
+                                                                               class="form-control" name="email" required>
+                                                                        <label for="form-contact-email" class="">Your email</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--Grid column-->
+
+                                                        </div>
+                                                        <!--Grid row-->
+
+                                                        <!--Grid row-->
+                                                        <div class="row">
+
+                                                            <!--Grid column-->
+                                                            <div class="col-md-6">
+                                                                <div class="md-form">
+                                                                    <div class="md-form">
+                                                                        <input type="tel" id="form-contact-phone"
+                                                                               class="form-control" name="phone">
+                                                                        <label for="form-contact-phone" class="">Your phone</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--Grid column-->
+
+                                                            <!--Grid column-->
+                                                            <div class="col-md-6">
+                                                                <div class="md-form">
+                                                                    <div class="md-form">
+                                                                        <input type="text" id="form-contact-company"
+                                                                               class="form-control" name="company">
+                                                                        <label for="form-contact-company" class="">Your company</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--Grid column-->
+
+                                                        </div>
+                                                        <!--Grid row-->
+
+                                                        <!--Grid row-->
+                                                        <div class="row">
+
+                                                            <!--Grid column-->
+                                                            <div class="col-md-6 pt-3 align-center">
+                                                                {{ recaptcha }}
+                                                            </div>
+                                                            <!--Grid column-->
+
+                                                            <!--Grid column-->
+                                                            <div class="col-md-6">
+
+                                                                <div class="md-form">
+                                                                    <textarea type="text" id="form-contact-message"
+                                                                              class="md-textarea" name="message" required></textarea>
+                                                                    <label for="form-contact-message">Your message</label>
+                                                                    <a type="submit"
+                                                                       class="btn-floating btn-lg blue submit-contact"><i class="fa fa-send-o"></i></a>
+                                                                </div>
+
+                                                            </div>
+                                                            <!--Grid column-->
+
+                                                        </div>
+                                                        <!--Grid row-->
+                                                        <!--Status row-->
+                                                        <div class="row">
+                                                            <div class="col-md-12 success" style="display:none">
+                                                                <div class="card success-color text-center z-depth-2">
+                                                                    <div class="card-body">
+                                                                        <p class="white-text mb-0">Your message has been sent.
+                                                                            I will be in touch soon!</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12 failure" style="display:none">
+                                                                <div class="card red lighten-1 text-center z-depth-2">
+                                                                    <div class="card-body ">
+                                                                        <p class="white-text mb-0 failure-p">Something went
+                                                                            wrong when trying to send the email...</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--Status row-->
+                                                    </form>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <div class="card-body contact text-center bg-blue darken-4">
+                                                    <div class="container">
+                                                        <div class="mb-5">
+                                                            <h3>My Information</h3>
+                                                        </div>
+
+                                                        <ul class="contact-icons">
+                                                            <li>
+                                                                <p><i class="fa fa-map-marker text-white"></i> Herndon, VA 20170</p>
+                                                            </li>
+
+                                                            <li>
+                                                                <p><i class="fa fa-phone text-white"></i> <a class="text-white" href="tel:13344446464">(334) 444-6464</a></p>
+                                                            </li>
+
+                                                            <li>
+                                                                <p><i class="fa fa-envelope text-white"></i> <a class="text-white"
+                                                                      href="mailto:michael@michaelhenry.me">michael@michaelhenry.me</a></p>
+                                                            </li>
+                                                        </ul>
+
+                                                        <hr class="hr-light mb-4 mt-4">
+
+                                                        <ul class="inline-ul text-center list-unstyled">
+                                                            <li>
+                                                                <a class="icons-sm tw-ic"
+                                                                   href="https://twitter.com/michael_d_henry"
+                                                                   target="_blank"><i class="fa fa-twitter fa-lg white-text mr-md-4"> </i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="icons-sm li-ic"
+                                                                   href="https://www.linkedin.com/in/mhenry01/"
+                                                                   target="_blank"><i class="fa fa-linkedin fa-lg white-text mr-md-4"> </i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="icons-sm ins-ic"
+                                                                   href="https://instagram.com/michael_d_henry"
+                                                                   target="_blank"><i class="fa fa-instagram fa-lg white-text mr-md-4"> </i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/Form with header-->
+
+                                </div>
+                                <!--Grid column-->
+
+                            </div>
+                            <!--Grid row-->
+
+                        </section>
+                        <!-- Form contact -->
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <!--Contact Me Layout-->

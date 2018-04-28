@@ -13,11 +13,8 @@ def make_secret_key():
     """
     try:
         new_key = urandom(64)
-        print(new_key)
         token = b64encode(new_key).decode('utf-8')
         environ['FLASK_SECRET_KEY'] = token
-        print(token)
-        print(b64decode(token))
         if environ['FLASK_SECRET_KEY'] == b64decode(token):
             pass
     except KeyError as make_secret_e:
